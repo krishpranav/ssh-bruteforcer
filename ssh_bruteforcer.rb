@@ -41,3 +41,13 @@ def crack()
   exit()
  end
 end
+def read_word()
+    number_of_lines=0
+    File.open($options[:wordlist], 'r') do |file|
+        file.each do |count|
+            number_of_line+=1
+        end
+        print("\nFound:#{number_of_lines.to_s} passwords") if $options.verbose?
+    end
+end
+main()
